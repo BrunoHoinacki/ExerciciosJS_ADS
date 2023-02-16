@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+	<meta charset="utf-8">
+	<title>Praticando JS - EX1 </title>
+	<style>
+		.example{
+		padding: 5px 10px;
+		text-align: center;
+		border: solid 5px;
+		}
+	</style>
+</head>
+
+<body>
+	<p class="example">
+	Está é minha primeira calcúladora em JS 
+	</p>
+</body>
+	
+	
+	<script type="text/javascript">
+	
+		var numero1 = prompt("Insira o primeiro número: ");
+		var numero2 = prompt("Insira o segundo número: ");
+		var operacao = prompt("Qual a operação que deseja realizar? (Digite + ou - ou * ou /) ");
+		
+		var resultadoOperacao = realizaOperacao(numero1, numero2, operacao);
+		
+		alert('O resultado da operação é igual a: ' + resultadoOperacao);
+		
+		function realizaOperacao(numero1, numero2,op){
+		
+			var resultado = 0;
+			
+			// resultado = numero1 + eval(op) + numero2;
+			resultado = eval(numero1 + op + numero2);
+			
+			return resultado;
+		}
+	</script>
+</html>

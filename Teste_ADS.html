@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<!--  Faça um programa em JavaScript que:
+
+Solicite ao usuário que insira dois números inteiros positivos;
+
+Utilize um vetor para armazenar esses dois números;
+
+Verifique se os números inseridos são inteiros positivos. Caso contrário, solicite ao usuário para inseri-los novamente;
+
+Divida os dois números inteiros positivos;
+
+Imprima na tela o resultado da divisão.
+
+Observações:Há mais de uma forma de desenvolver o programa. Logo, não há código certo ou errado.
+
+Você pode utilizar funções JavaScript para melhor organizar o seu código. Inclusive, pode usar um pouco de recursividade. -->
+
+<head>
+	<meta charset="utf-8">
+	<title>Incorporando Javascript em Páginas HTML</title>
+	<!-- Incorporando um arquivo .js externo -->
+	<script src="script.js"></script>
+</head>
+<body>
+	<div id="exibe_resultado"> Valeu <3 ass: BHB </div>
+</body>
+	<!-- Incorporando códigos Javascript diretamente na página -->
+	<script type="text/javascript">  
+		var numeros = [];
+		
+		numeros[0] = solicitaPrimeiroNumero();
+		numeros[1] = solicitaSegundoNumero();
+		
+		var resultadoDivisao = divida(numeros);
+		
+		alert('O resultado da divisão é igual a: ' + resultadoDivisao);
+		
+		function solicitaPrimeiroNumero(){
+			var numero1 = prompt("Insira o primeiro número: ");
+			
+		if(numero1 < 0){
+			alert("O número precisa ser inteiro e positivo");
+			
+			return solicitaPrimeiroNumero();
+		}else{
+			return numero1;
+		}
+	}
+	
+	function solicitaSegundoNumero(){
+		var numero2 = prompt("insira o segundo número: ");
+		
+		if(numero2 < 0){
+			alert("O número precisa ser inteiro e positivo");
+			return solicitaSegundoNumero();
+		}else{
+			return numero2;
+		}
+	}
+	
+	function divida(numeros){
+		var resultado = 0;
+		
+		resultado = numeros[0] / numeros[1];
+		return resultado;
+	}
+		
+	</script>
+</html>
